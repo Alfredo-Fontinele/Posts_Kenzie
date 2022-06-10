@@ -6,6 +6,8 @@
     padding: 0;
     outline: 0;
     border: 0;
+    list-style: none;
+    text-decoration: none;
     font-family: 'Inter';
 }
 
@@ -15,26 +17,34 @@ body {
 
 .bg1 {
     background-color: #FFF;
-    transition: all 50ms;
+    background-image: url("https://i.pinimg.com/originals/38/b2/d8/38b2d8bcac8b7b048b191645f3e6b816.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    transition: all 1s;
 }
 
 .bg2 {
-    background-image: url("https://i.stack.imgur.com/90nGa.jpg");
+    background-color: #FFF;
+    background-image: url("https://pickywallpapers.com/img/2018/2/firewatch-mountain-desktop-wallpaper-418-425-hd-wallpapers.jpg");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
     color: #FFF;
-    transition: all 50ms;
+    transition: all 1s;
 }
 
 header {
     width: 100%;
-    height: 80px;
+    height: 100px;
     display: flex;
     align-items: center;
     box-shadow: 0px 4px 40px -15px rgba(0, 0, 0, 0.25);
     margin-bottom: 70px;
+    background-color: rgb(20,30,40);
+    color: #FFF;
 }
 
 .header {
@@ -46,7 +56,32 @@ header {
     margin: auto;
 }
 
-.header_bottom button {
+.header_right,
+.header_right ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header_right li {
+    padding: 10px 20px;
+}
+
+.header_right li:last-child {
+    padding-right: 0px;
+}
+
+.header_right a {
+    color: #FFF;
+}
+
+.header_right a:hover {
+    color: springgreen;
+    border-bottom: 5px solid springgreen;
+    padding-bottom: 35px;
+}
+
+.header_right button {
     background-color: #007dff;
     color: #FFF;
     font-weight: bold;
@@ -56,12 +91,28 @@ header {
     transition: all 0.5s;
 }
 
-.header_bottom button:hover {
+.header_right button:hover {
     transform: scale(1.03);
     background-color: springgreen;
 }
 
+.menu_mobile {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu_mobile div {
+    background-color: springgreen;
+    border-radius: 8px;
+    height: 5px;
+    width: 45px;
+    margin: 4px 0;
+}
+
 main {
+    background-color: rgba(20,30,40, 0.6);
     width: 100%;
     max-width: 1200px;
     display: flex;
@@ -70,6 +121,7 @@ main {
     margin: auto;
     padding: 30px;
     border-radius: 10px;
+    color: #FFF;
 }
 
 .main {
@@ -96,14 +148,15 @@ main {
     border-radius: 8px;
     width: 320px;
     height: 363px;
-    transition: all 0.5s;
+    transition: all 0.3s;
     cursor: pointer;
     border: 3px solid transparent;
+    font-weight: bold;
 }
 
 .cards:hover {
     transform: scale(1.02);
-    color: #007dff;
+    color: springgreen;
     box-shadow: 0px 4px 30px -15px rgba(0, 0, 0, 0.5);
 }
 
@@ -156,7 +209,7 @@ main {
     display: flex;
     gap: 20px;
     margin: 20px 0;
-    transition: all 0.5s;
+    transition: all 0.3s;
     cursor: pointer;
     padding: 10px;
     border: 3px solid transparent;
@@ -165,7 +218,7 @@ main {
 
 .news:hover {
     transform: scale(1.02);
-    color: #007dff;
+    color: springgreen;
     box-shadow: 0px 4px 30px -15px rgba(0, 0, 0, 0.8);
 }
 
@@ -213,6 +266,7 @@ footer {
 @media only screen and (max-width: 1300px) {
 
     .header,
+    .main,
     .footer {
         padding: 0 30px;
     }   
@@ -236,7 +290,37 @@ footer {
 
 }
 
-@media only screen and (max-width: 740px) {
+@media only screen and (max-width: 760px) {
+
+    .menu_mobile {
+        display: flex;
+    }
+
+    .header_right {
+        background-color: rgba(20, 30, 40, 0.8);
+        position: absolute;
+        top: 100px;
+        width: 100%;
+        height: calc(100vh - 100px);
+        left: -150%;
+        transition: all 200ms;
+    }
+
+    .header_right.active {
+        left: 0;
+    }
+
+    .header_right ul {
+        flex-direction: column;
+    }
+
+    .header_right li {
+        margin: 10px 0;
+    }
+
+    .header_right li:last-child {
+        padding: 10px 0px;
+    }
 
     .main {
         flex-direction: column;
