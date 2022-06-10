@@ -46,7 +46,7 @@ header {
 }
 
 .header_bottom button {
-    background-color: slateblue;
+    background-color: #007dff;
     color: #FFF;
     font-weight: bold;
     padding: 10px 20px;
@@ -64,6 +64,8 @@ main {
     width: 100%;
     max-width: 1200px;
     display: flex;
+    justify-content: center;
+    align-items: center;
     margin: auto;
     padding: 30px;
     border-radius: 10px;
@@ -71,7 +73,6 @@ main {
 
 .main {
     display: flex;
-    margin: auto;
     justify-content: space-around;
     width: 100%;
     max-width: 1200px;
@@ -194,4 +195,12 @@ footer {
 
 .footer_right img:hover {
     transform: scale(1.15);
+}
+
+@media only screen and (max-width: 1300px) {
+
+    .main {
+        justify-content: center;
+    }
+
 }
