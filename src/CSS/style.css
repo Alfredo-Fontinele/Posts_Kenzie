@@ -246,10 +246,6 @@ footer {
         margin-left: 0px;
     }
 
-    .news_title h4 {
-        text-align: center;
-    }
-
     .news {
         display: flex;
         justify-content: center;
