@@ -103,7 +103,6 @@ main {
 .cards:hover {
     transform: scale(1.02);
     color: #007dff;
-    border: 3px solid springgreen;
     box-shadow: 0px 4px 30px -15px rgba(0, 0, 0, 0.8);
 }
 
@@ -134,6 +133,9 @@ main {
 }
 
 .list_news {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     width: 30%;
 }
 
@@ -143,9 +145,10 @@ main {
 
 .list_news .news_title {
     font-weight: 600;
-    margin: 35px 0;
+    margin: 45px 0;
     font-size: 18px;
     line-height: 22px;
+    text-align: center;
 }
 
 .news {
@@ -161,7 +164,6 @@ main {
 
 .news:hover {
     transform: scale(1.02);
-    border: 3px solid springgreen;
     color: #007dff;
     box-shadow: 0px 4px 30px -15px rgba(0, 0, 0, 0.8);
 }
@@ -270,8 +272,10 @@ footer {
 
     .news {
         flex-direction: column;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         text-align: center;
-        display: block;
         width: 100%;
     }   
 
