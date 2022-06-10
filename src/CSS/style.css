@@ -27,7 +27,7 @@ body {
 
 .bg1 {
     background-color: #FFF;
-    background-image: url("https://i.pinimg.com/originals/38/b2/d8/38b2d8bcac8b7b048b191645f3e6b816.png");
+    background-image: url("https://pickywallpapers.com/img/2018/2/firewatch-mountain-desktop-wallpaper-418-425-hd-wallpapers.jpg");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -37,7 +37,7 @@ body {
 
 .bg2 {
     background-color: #FFF;
-    background-image: url("https://pickywallpapers.com/img/2018/2/firewatch-mountain-desktop-wallpaper-418-425-hd-wallpapers.jpg");
+    background-image: url("https://i.pinimg.com/originals/38/b2/d8/38b2d8bcac8b7b048b191645f3e6b816.png");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -130,7 +130,6 @@ main {
     align-items: center;
     margin: auto;
     padding: 30px;
-    border-radius: 10px;
     color: #FFF;
 }
 
@@ -204,7 +203,10 @@ main {
 }
 
 .list_news .news_title:first-child {
-    margin-top: 10px;
+    margin-top: 27px;
+    background-color: #007dff;
+    border-radius: 10px;
+    padding: 10px 50px;
 }
 
 .list_news .news_title {
@@ -240,7 +242,7 @@ main {
 
 footer {
     margin-top: 200px;
-    height: 200px;
+    height: 300px;
     background-color: rgb(20,30,40);
     display: flex;
     justify-content: center;
@@ -273,17 +275,17 @@ footer {
     transform: scale(1.15);
 }
 
-@media only screen and (max-width: 1300px) {
-
+@media only screen and (max-width: 1200px) {
+    
     .header,
     .main,
     .footer {
         padding: 0 30px;
     }   
 
-}
-
-@media only screen and (max-width: 1176px) {
+    .list_news .news_title:first-child {
+        margin-top: 10px;
+    }
 
     .list_cards {
         width: 50%;
@@ -339,7 +341,7 @@ footer {
     }
 
     .list_news {
-        margin-top: 100px;
+        margin-top: 50px;
         margin-left: 0px;
     }
 
@@ -382,8 +384,8 @@ footer {
         flex-direction: column;
     }
 
-    .footer_left h1 {
-        margin-bottom: 20px;
+    .footer h1 {
+        margin-bottom: 50px;
     }
 
 }

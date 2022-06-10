@@ -14,6 +14,5 @@ function mudarTema() {
     } else {
         body.classList.remove("bg2");
         body.classList.add("bg1");
-        header.style.color = "#000";
     }
 }
